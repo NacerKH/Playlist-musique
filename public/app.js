@@ -3,7 +3,9 @@ var audio=document.getElementById('audio');
 var pause=document.getElementById('pause') ;
 var btnstop=document.getElementById('stop');
 var item =document.getElementById('item');
-console.log(item);
+var playlist =document.getElementById('playlist');
+// var playlist = document.getElementsByTagName("div")[0];
+console.log(playlist.getElementsByTagName("div")[0]);
 
 play.onclick = function() {playAudio()};
 pause.onclick = function() {pauseAudio()};
