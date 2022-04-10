@@ -1,0 +1,234 @@
+
+@import url('//fonts.googleapis.com/css?family=Rubik Bubbles');
+
+   
+
+* {
+    margin: 0;
+    box-sizing: border-box;}
+    body{
+        background-color: darksalmon;
+        font-family: 'Rubik Bubbles';
+        background-image: url('../images/back.jpg');
+background-repeat: no-repeat;
+        font-size: 1rem;
+        font-weight: 400;
+         line-height: 1.5;
+         overflow-x: hidden;
+
+    }
+    html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height:5rem ;
+        background-color: dimgray;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+          gap: 0.2rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        margin-left:1rem;
+    }
+    nav .title{
+        
+        text-align: center;
+        font-family: 'Rubik Bubbles';
+
+        color: coral;
+        background-color: rgba(199, 147, 79, 0.541);
+        box-shadow: 0 1px 3px 0 rgba(71, 68, 12, 0.892), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        border-radius: 0.4rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 5px;
+        flex-grow: 0;
+        flex-shrink: 1;
+       
+        
+
+    }
+.vline-left {
+        border-left: 6px solid rgba(205, 156, 102, 0.691);
+        height:100px;
+       margin:3px;
+       border-radius: 100%;
+      } 
+      .vline-right {
+        border-right: 6px solid rgba(205, 156, 102, 0.691);
+        height:100px;
+       margin:3px;
+       border-radius: 100%;
+      } 
+    h2, .h2, h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1, .h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2, .h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 2rem;
+  }
+}
+@font-face {
+    font-family: 'halvetica';
+    src: url('fonts/halvetica.ttf')
+}
+/* section{
+    flex: 1;
+    display: block;
+   flex-grow: 0;
+   flex-shrink: 0;
+
+  background-color: rgba(180, 84, 84, 0.763); 
+    
+} */
+.container{
+    
+ 
+    /* background-color: black; */
+    /* height: 500px; */
+    margin-top: 5rem;
+   box-shadow:  rgb(56 62 56 / 88%) 0px 12px 12px 12px, rgb(41 39 42) 0px 12px 12px 12px;
+    border-radius: 15px;
+    padding: 1em;
+    margin-left:4rem
+    
+}
+@media (max-width: 660px) {
+   .container {
+    margin-left: 40px;
+    margin-right: 40px;
+    
+    }
+    .btn{
+        padding: 1px;;
+    }
+}
+
+/* .container .card{
+     display: block;
+    width: 100%;
+     height: 500px;
+  
+} */
+.card .card-header{
+  /* background-color: rgb(0, 0, 0); */
+    
+
+}
+.card .card-header  img{
+    width: 100%;
+    height: 300px;
+}
+.control-audio{
+    margin: 10px;
+    /* background-color: burlywood; */
+}
+.btn{
+   margin: 10px;; /* background-color: aliceblue; */
+background-color: coral;
+border: rgba(205, 156, 102, 0.691);
+border-radius: 100%;
+padding:6px;
+}
+.btn:hover{
+transform: scale(1.15);
+transition: ease-out;
+background-color: aliceblue;
+}
+.hide{
+    display: none ;
+    opacity: 0;
+}
+.display{
+    display: block ;
+}
+.playlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 10px solid rgb(128, 111, 111) ;
+ margin-top: 4rem;
+    gap: 0.2rem;
+    /* box-shadow: 0 12px 12px 12px rgba(215, 170, 63, 0.878), 0 12px 12px 12px rgb(11, 76, 255); */
+    overflow-y: scroll;
+    height: 500px;
+    border-radius: 1rem;
+    overflow-x: hidden;
+}
+.item{
+    background-color: bisque;
+    /* height:15px; */
+    align-items: center;
+   flex: 1;
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 100%;
+    text-align: center;
+    font-family: 'Rubik Bubbles';font-size: 22px;
+    font-size: 15px;
+    line-height: 15px;
+    color: rgb(243, 197, 30);
+    margin-top: 3px;  
+    margin-bottom: 1px;  
+    padding: 15px;
+    
+}
+.item:hover{
+    transform: scale(1.01);
+    transition: ease-out;
+    background-color: rgb(198, 184, 93);
+}
+.row{
+    display: flex;
+justify-content: center;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    
+
+}
+.col{
+   flex: 1;
+    flex-grow: 0;
+    flex-shrink:0 ;
+}
+.playlist > *{
+    flex-basis: 100%;
+}
+.logo{
+    height: 10px;
+    max-width: 5000px;
+    padding: 10px;
+    margin-top: 5rem;
+}
+.logo-img{
+    width: 100%;
+    height: 150px;
+    border-radius: 4rem;
+
+}
