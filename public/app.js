@@ -4,13 +4,15 @@ var pause=document.getElementById('pause') ;
 var btnstop=document.getElementById('stop');
 var item =document.getElementById('item');
 var playlist =document.getElementById('playlist');
-// var playlist = document.getElementsByTagName("div")[0];
-console.log(playlist.getElementsByTagName("div")[0]);
+
+ const n = playlist.getElementsByTagName("div").length;
+
+console.log(playlist.getElementsByTagName("value")[1].getAttribute('value'));
 
 play.onclick = function() {playAudio()};
 pause.onclick = function() {pauseAudio()};
 btnstop.onclick = function() {stopAudio()};
-item.onclick = function() {playlistSelect()};
+playlist.onclick = function() {alert(playlist)};
 function playAudio(){
     audio.play();
     play.classList.add("hide")
@@ -26,7 +28,13 @@ function stopAudio(){
     pauseAudio();
     audio.currentTime = 0;
 }
+function checkTrack(){
+for (let i=0;pas < n ; i++){
+
+}
+    
+}
 function playlistSelect(){
-    audio.src=item.getAttribute('value');
+    audio.src=playlist.getElementsByTagName("div")[2].getAttribute('value');
     playAudio();
 }
