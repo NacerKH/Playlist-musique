@@ -4,15 +4,15 @@ var pause=document.getElementById('pause') ;
 var btnstop=document.getElementById('stop');
 var item =document.getElementById('item');
 var playlist =document.getElementById('playlist');
-
- const n = playlist.getElementsByTagName("div").length;
-
-console.log(playlist.getElementsByTagName("value")[1].getAttribute('value'));
+var items = document.querySelectorAll('.item');
+var n =playlist.getElementsByTagName("div").length-1;
+var previousId=document.getElementById('previous');
+var nextId=document.getElementById('next');
+console.log(n);
 
 play.onclick = function() {playAudio()};
 pause.onclick = function() {pauseAudio()};
 btnstop.onclick = function() {stopAudio()};
-playlist.onclick = function() {alert(playlist)};
 function playAudio(){
     audio.play();
     play.classList.add("hide")
@@ -28,13 +28,43 @@ function stopAudio(){
     pauseAudio();
     audio.currentTime = 0;
 }
-function checkTrack(){
-for (let i=0;pas < n ; i++){
 
-}
-    
-}
-function playlistSelect(){
-    audio.src=playlist.getElementsByTagName("div")[2].getAttribute('value');
+function playlistSelect(index){
+    audio.src=playlist.getElementsByTagName("div")[index].getAttribute('value');
+    console.log(audio.src)
     playAudio();
 }
+items.forEach(function (sandwich, index) {
+    playlist.getElementsByTagName("div")[index].addEventListener('click', function (event) {
+      
+        playlistSelect(index)
+      
+    });
+    previousId.addEventListener('click', function (event) {
+      
+        previous(index)
+      
+    });
+   nextId.addEventListener('click', function (event) {
+      
+        next(index)
+      
+    });
+
+});
+function previous(index){
+
+if (index > 0 && index < n ){
+           index= index--;
+        playlistSelect(index)
+
+}
+}
+function next(index){
+
+    if (index > 0 && index <= n ){
+               index= index++;
+            playlistSelect(index)
+    
+    }
+    }
